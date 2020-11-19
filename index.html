@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Demo/css/index.css">
+    <link rel="stylesheet" href="Demo/css/normal.css">
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="mynode/js/api.js"></script> -->
+</head>
+<body>
+    <div class="container">
+        <!-- .top+.banner+.main+.footer 快捷方式 -->
+        <div class="top">
+            <span>测试页面</span>
+        </div>
+        <div class="main">
+            <div class="main_left">
+                <ul>
+                    <li><p>实时视频</p></li>
+                </ul>
+                <object type='application/x-vlc-plugin' pluginspage="http://www.videolan.org/" id='vlc' events='false' width="720" height="410">
+                    <param name='mrl' value='rtsp://admin:Hg123_123@192.168.1.9/MPEG-4/ch1/main/av_stream' />
+                    <param name='volume' value='50' />
+                    <param name='autoplay' value='true' />
+                    <param name='loop' value='false' />
+                    <param name='fullscreen' value='false' />
+                    <param name='controls' value='false' />
+                </object>
+                <video src="http://192.168.1.8:18080/testVideo" width="600" height="450" autoplay="autoplay"  loop="loop"></video>
+                <video src="rtmp://localhost:1935/live/room"></video>
+            </div>
+            <div class="main_right">
+                <ul>
+                
+                </ul>
+            </div>
+            
+        </div>
+
+        <div class="footer"></div>
+    </div>
+</body>
+</html>
